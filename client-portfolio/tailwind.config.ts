@@ -62,7 +62,7 @@ export default {
 		'20':'repeat(20,minmax(100px,1fr))'
 		},
 		fontFamily:{
-			
+			hostgrotesk:['Host Grotesk ','sans-serif']
 		}
   	}
   },
