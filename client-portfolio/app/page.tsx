@@ -14,34 +14,8 @@ export default function Home() {
   const [selectedItemId,setSelectedItemId] =useState<number |null | void>(null)
 
  
- const burger = {
-  opened:(deg:string)=>({
-    rotate:deg,
-  }),
-  closed:{
-    rotate:0,
-  },
-  opened2:{
-    opacity:0,
-  },
-  closed2:{
-    opacity:1,
-  }
- }
- const homeText ={
-  onload:{
-    opacity:1,
-    y:0,
-    transision:{
-      staggerChildren: 0.5,
-    }
-  },
-  hidden:{
-    opacity:0,
-    y:'100%',
+ 
 
-  }
- }
  type exp ={
   Role:string,
   duration:string,
@@ -53,7 +27,7 @@ export default function Home() {
   Insitution:string,
   Qualification:string,
   duration:string,
-  description:String,
+  description:string,
   id:number,
  }
  const educationData1:education={
@@ -77,7 +51,7 @@ const completeEducationData :education[]=[educationData1,educationData2]
   duration:'[Feb 2024 - Feb 2024]',
   description:`Managed high volume  data entry tasks with precision and contributed to the operational efficiency during the Valentine &apos; s Day peak session `,
   company:'Net Florist',
-  id:1,
+  id:1.1,
  }
  const completeExperianceData :exp[] = [experianceData]
 function toggleAccordion(getCurrentid:number){
@@ -95,13 +69,13 @@ const cert1:crts={
   Institution:'University of Johannesburg',
   Name:'Intro to 4IR',
   Description:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae explicabo nulla fuga, ab incidunt qui in minus eaque rem dolor natus dolorum saepe nesciunt, sequi adipisci, ipsa velit neque numquam.',
-  Id:1,
+  Id:1.2,
 }
 const cert2:crts={
   Institution:'Alison.com',
   Name:'Intro to Data Analytics with Python',
   Description:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae explicabo nulla fuga, ab incidunt qui in minus eaque rem dolor natus dolorum saepe nesciunt, sequi adipisci, ipsa velit neque numquam.',
-  Id:2,
+  Id:2.2,
 }
 const cert3:crts={
   Institution:'Comptia',
@@ -137,14 +111,7 @@ const completeCrtData:crts[] =[cert1,cert2,cert3];
         console.log(isOpen)
         }}>
           <MenuIcon className={`${isOpen?'stroke-white dark:stroke-black' : 'stroke-black dark:stroke-white'}`}/>
-      {/* <motion.div className="w-[30px] h-[2px] bg-neutral-950 dark:bg-[#eaeaea] origin-left "
-      variants={burger} animate={isOpen?'opened':'closed'} custom={'25deg'}
-      ></motion.div>
-      
-      <motion.div className="w-[30px] h-[2px] bg-neutral-950 dark:bg-[#eaeaea] origin-left" variants={burger} animate={isOpen ? 'opened':'closed'} custom={'-20deg'}></motion.div>
-      <motion.div className="w-[30px] h-[2px] bg-neutral-950 dark:bg-[#eaeaea] origin-left" variants={burger} animate={isOpen?'opened2':'closed2'} ></motion.div> */}
-
-      {/*  */}
+     
       
       </div>
       </div>
@@ -224,9 +191,9 @@ const completeCrtData:crts[] =[cert1,cert2,cert3];
     <div className="lg:w-1/2 text-md lg:text-xl lg:overflow-y-scroll overflow-x-hidden  scrollbar-hide lg:max-h-screen space-y-6 p-10">
     <div>
     <p className="text-xl lg:text-2xl tracking-wide font-medium text-wrap">
-        I &pos;m a multi-disciplinary product designer with over 6 years of experience based in London. Currently at Google leading several high-priority privacy and safety features on Android  the world's most widely used operating system.
+        I &pos;m a multi-disciplinary product designer with over 6 years of experience based in London. Currently at Google leading several high-priority privacy and safety features on Android  the world&pos;s most widely used operating system.
         <br /><br />
-        I am driven by curiosity and my mission to design empathetic products that balance user experience and business impact. Before Google, I worked as a Senior UX Designer at McKinsey & Company, helping clients from banking, non-profit, retail, energy, and telco, to bring disruptive digital products and services to market, and help grow clients' own design teams.
+        I am driven by curiosity and my mission to design empathetic products that balance user experience and business impact. Before Google, I worked as a Senior UX Designer at McKinsey & Company, helping clients from banking, non-profit, retail, energy, and telco, to bring disruptive digital products and services to market, and help grow clients&lsquo;own design teams.
         <br /><br />
         In my downtime, I enjoy exploring new destinations with my trusty camera.
       </p>
@@ -236,7 +203,7 @@ const completeCrtData:crts[] =[cert1,cert2,cert3];
       {
         completeEducationData && completeEducationData.length > 0
         ?completeEducationData.map((dataItem)=>(
-          <div className="">
+          <div className="" key={dataItem.id}>
              <div 
       className="w-full h-[2px] bg-neutral-800 mb-2 text-xl font-semibold"></div>
             <div
@@ -278,7 +245,7 @@ const completeCrtData:crts[] =[cert1,cert2,cert3];
       {
         completeExperianceData&& completeExperianceData.length > 0
         ?completeExperianceData.map((dataItem)=>(
-          <div className="">
+          <div className="" key={dataItem.id}>
              <div 
       className="w-full h-[2px] bg-neutral-800 mb-2"></div>
             <div
@@ -320,7 +287,7 @@ const completeCrtData:crts[] =[cert1,cert2,cert3];
     {
         completeCrtData && completeCrtData.length > 0
         ?completeCrtData.map((dataItem)=>(
-          <div className="space-y-2">
+          <div className="space-y-2" key={dataItem.Id}>
              <div 
       className="w-full h-[2px] bg-neutral-800 "></div>
             <div
