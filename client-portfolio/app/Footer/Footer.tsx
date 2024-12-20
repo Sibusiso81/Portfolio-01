@@ -1,5 +1,5 @@
-import { AArrowDown, ArrowUpRight } from "lucide-react";
-import Link from "next/link";
+import {  ArrowUpRight } from "lucide-react";
+
 import React from "react";
 
 function Footer() {

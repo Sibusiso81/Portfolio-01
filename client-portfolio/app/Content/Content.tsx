@@ -1,7 +1,7 @@
 'use client'
 
 import { AnimatePresence,  motion } from "framer-motion";
-import { useState ,useEffect} from "react";
+import { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import { WordPullUp } from "@/components/ui/wordpullup";
 import { ArrowDown, MenuIcon,X } from "lucide-react";
