@@ -1,7 +1,7 @@
-import { clipPath, div } from "framer-motion/client";
+
 import React from "react";
-import { delay, easeIn, motion } from "framer-motion";
-import { Duru_Sans } from "next/font/google";
+import { motion } from "framer-motion";
+
 console.log("navbar");
 function Navbar() {
   const children = {
