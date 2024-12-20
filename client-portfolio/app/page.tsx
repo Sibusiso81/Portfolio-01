@@ -1,30 +1,19 @@
 'use client'
-import Image from "next/image";
-import { AnimatePresence, delay, motion } from "framer-motion";
+
+import { AnimatePresence,  motion } from "framer-motion";
 import { useState } from "react";
 import Navbar from "./Navbar/Navbar";
 import { WordPullUp } from "@/components/ui/wordpullup";
-import { ArrowDown, CircleArrowUp, Delete, MenuIcon, RemoveFormatting, RemoveFormattingIcon,X } from "lucide-react";
-import { get } from "http";
-import { div } from "framer-motion/client";
+import { ArrowDown, MenuIcon,X } from "lucide-react";
+
 import { ModeToggle } from "@/components/ui/mode-toggle";
-import { useTheme } from "next-themes";
+
 export default function Home() {
   const [isOpen,setIsOpen] = useState<boolean>(false);
   const [selected,setSelected] = useState<boolean>(false)
   const [selectedItemId,setSelectedItemId] =useState<number |null | void>(null)
- /*  const [selected,setSelected] = useState<number | null>(null);
-  const [enableMultiSelection] = useState<boolean>(true);
-  const [multiple,settMultiple] = useState([])
-  function handleMultiSelection(getCurrentid:unknown){
-    let cpyMultiple = [...multiple];
-    const findIndexOfCurrentId = cpyMultiple.indexOf(getCurrentid);
 
-    console.log(findIndexOfCurrentId)
-    if(findIndexOfCurrentId === 1) cpyMultiple.push(getCurrentid)
-      else cpyMultiple.splice(findIndexOfCurrentId)
-  } */
-   const { setTheme } = useTheme()
+ 
  const burger = {
   opened:(deg:string)=>({
     rotate:deg,
@@ -235,7 +224,7 @@ const completeCrtData:crts[] =[cert1,cert2,cert3];
     <div className="lg:w-1/2 text-md lg:text-xl lg:overflow-y-scroll overflow-x-hidden  scrollbar-hide lg:max-h-screen space-y-6 p-10">
     <div>
     <p className="text-xl lg:text-2xl tracking-wide font-medium text-wrap">
-        I'm a multi-disciplinary product designer with over 6 years of experience based in London. Currently at Google leading several high-priority privacy and safety features on Android – the world's most widely used operating system.
+        I &pos;m a multi-disciplinary product designer with over 6 years of experience based in London. Currently at Google leading several high-priority privacy and safety features on Android  the world's most widely used operating system.
         <br /><br />
         I am driven by curiosity and my mission to design empathetic products that balance user experience and business impact. Before Google, I worked as a Senior UX Designer at McKinsey & Company, helping clients from banking, non-profit, retail, energy, and telco, to bring disruptive digital products and services to market, and help grow clients' own design teams.
         <br /><br />
