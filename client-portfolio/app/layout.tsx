@@ -23,10 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 ,user-scalable=no" />
         <meta name="author" content="Sanele Ncube's Website ,an attempt to transcend my CV and create a better connection with potential recruiters and colleborators" />
         <meta name="description" content="Your website's general description." />
-        <meta name="keywords" content="relevant, keywords, for, your, website" />
+        <meta name="keywords" content="Sanele Ncube ,Portfolio,CyberSecurity,Data,Tech,Developer" />
 
         {/* Open Graph (OG) Meta Tags */}
         <meta property="og:title" content="Sanele Ncube's Website ,an attempt to transcend my CV and create a better connection with potential recruiters and colleborators" />

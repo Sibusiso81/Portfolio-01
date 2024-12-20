@@ -68,6 +68,16 @@
     @apply text-foreground;
     overflow: auto;
     @apply font-hostgrotesk
-
+  
+    
   }
+}
+.html,body{
+  position: relative;
+  overscroll-behavior: contain; /* Prevent scrolling/panning beyond the viewport */
+  touch-action: none; /* Disable panning for touch or trackpads */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  max-width: 100%;    /* Prevent content from exceeding viewport width */
 }

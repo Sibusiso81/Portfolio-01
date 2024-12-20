@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <main 
-    className=" text-black dark:text-white bg-white dark:bg-[#080808] scroll-smooth">
+    className="overflow-hidden w-fit text-black dark:text-white bg-white dark:bg-[#080808] scroll-smooth p-0">
       <Content />
       <Footer/>
     </main>
